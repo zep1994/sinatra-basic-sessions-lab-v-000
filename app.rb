@@ -2,9 +2,11 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
   
-  get '/'
+  get '/' do
     enable :sessions
-    @sessions = sessions
   end
   
+  get '/checkout' do
+    @sessions = sessions
+  end
 end

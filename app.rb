@@ -4,7 +4,7 @@ class App < Sinatra::Base
   
   get '/' do
     enable :sessions
-    set :session_secret
+    set :session_secret, "secret"
   end
   
   get '/checkout' do
